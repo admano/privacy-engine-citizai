@@ -1,0 +1,67 @@
+[
+  {
+    "name": "email",
+    "text": "Contact adam@example.com for information.",
+    "expected": [
+      {
+        "entity_type": "EMAIL",
+        "value": "adam@example.com",
+        "start": 8,
+        "end": 24
+      }
+    ]
+  },
+    {
+    "name": "swiss_ahv",
+    "text": "AHV-Nr: 756.1234.5678.97",
+    "expected": [
+        {
+        "entity_type": "CH_AHV",
+        "value": "756.1234.5678.97",
+        "start": 8,
+        "end": 24
+        }
+    ]
+    },
+    {
+    "name": "swiss_iban",
+    "text": "IBAN: CH93 0076 2011 6238 5295 7",
+    "expected": [
+        {
+        "entity_type": "CH_IBAN",
+        "value": "CH93 0076 2011 6238 5295 7",
+        "start": 6,
+        "end": 32
+        }
+    ]
+    },
+  {
+    "name": "swiss_phone",
+    "text": "Telefon: +41 79 123 45 67",
+    "expected": [
+      {
+        "entity_type": "CH_PHONE",
+        "value": "+41 79 123 45 67",
+        "start": 9,
+        "end": 25
+      }
+    ]
+  },
+  {
+    "name": "swiss_uid",
+    "text": "UID: CHE-123.456.788",
+    "expected": [
+      {
+        "entity_type": "CH_UID",
+        "value": "CHE-123.456.788",
+        "start": 5,
+        "end": 20
+      }
+    ]
+  },
+  {
+    "name": "no_pii",
+    "text": "This text contains no sensitive information.",
+    "expected": []
+  }
+]
